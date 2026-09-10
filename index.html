@@ -16,6 +16,8 @@
 <style>
   /* 期刊名比原站的状态标签长，补一个间距，避免与左侧编号相撞 */
   .paper-meta { gap: 16px; }
+  /* PlumX 徽章需要与文字链接垂直居中对齐，避免被 flex 拉伸变形 */
+  .paper-links { align-items: center; }
   /* 原站简介只有两段，第三段起需要补段间距，取值与 .bio-teaching 一致 */
   .bio + .bio { margin-top: 18px; }
 
@@ -246,6 +248,7 @@
               <p class="paper-description"><em>Journal of the Association of Environmental and Resource Economists</em>, 13(1), 1 to 40.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1086/737533" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1086/737533" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -264,6 +267,7 @@
               <p class="paper-description"><em>Transportation Research Part A: Policy and Practice</em>, 205, 104865.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.tra.2026.104865" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.tra.2026.104865" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -282,6 +286,7 @@
               <p class="paper-description"><em>Transportation Research Part D: Transport and Environment</em>, 158, 105470.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.trd.2026.105470" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.trd.2026.105470" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -300,6 +305,7 @@
               <p class="paper-description"><em>Transportation Research Part D: Transport and Environment</em>, 154, 105286.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.trd.2026.105286" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.trd.2026.105286" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -318,6 +324,7 @@
               <p class="paper-description"><em>Transportation Research Part A: Policy and Practice</em>, 204, 104853.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.tra.2025.104853" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.tra.2025.104853" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -336,6 +343,7 @@
               <p class="paper-description"><em>Transportation Research Part E: Logistics and Transportation Review</em>, 202, 104337.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.tre.2025.104337" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.tre.2025.104337" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -369,6 +377,7 @@
               <p class="paper-description"><em>Journal of Air Transport Management</em>, 126, 102800.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.jairtraman.2025.102800" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.jairtraman.2025.102800" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -387,6 +396,7 @@
               <p class="paper-description"><em>Transport Policy</em>, 159, 44 to 56.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.tranpol.2024.10.005" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.tranpol.2024.10.005" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -420,6 +430,7 @@
               <p class="paper-description"><em>Energy Economics</em>, 115, 106377.</p>
               <div class="paper-links">
                 <a href="https://doi.org/10.1016/j.eneco.2022.106377" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+                <a href="https://plu.mx/plum/a/?doi=10.1016/j.eneco.2022.106377" class="plumx-plum-print-popup" data-badge="true"></a>
               </div>
             </div>
           </article>
@@ -577,6 +588,7 @@
     </article>
   </div>
 </main>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
 <script>
 (function () {
   // 一套逻辑驱动 Grants、Publications、Awards、Teaching 四处筛选栏
