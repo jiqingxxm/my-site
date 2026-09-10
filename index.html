@@ -18,6 +18,9 @@
   .paper-meta { gap: 16px; }
   /* PlumX 徽章需要与文字链接垂直居中对齐，避免被 flex 拉伸变形 */
   .paper-links { align-items: center; }
+  /* PlumX 徽章去掉英文文字标签，只留彩色小图标；并去掉从 .paper-links a 继承来的下划线 */
+  .paper-links .plx-wrapping-print-link { border-bottom: none !important; font-size: 0 !important; display: inline-flex !important; align-items: center !important; }
+  .paper-links .plx-print { width: 32px !important; height: 32px !important; }
   /* 原站简介只有两段，第三段起需要补段间距，取值与 .bio-teaching 一致 */
   .bio + .bio { margin-top: 18px; }
 
@@ -571,13 +574,13 @@
               <p>Our paper on the impacts of high speed rail speed-up on China's aviation industry received the ATRS China Chapter Best Paper Award at the 29th World Conference of the Air Transport Research Society in Beijing.</p>
             </div>
           </article>
-          <article class="news-row">
+          <!-- <article class="news-row">
             <time>July 2025</time>
             <div>
               <span>Award</span>
               <p>Our paper on the unintended social loss due to Russia-Ukraine airspace closures received the sole Best Overall Paper Award at the 28th World Conference of the Air Transport Research Society in Hong Kong.</p>
             </div>
-          </article>
+          </article> -->
 </div>
       </section>
 
