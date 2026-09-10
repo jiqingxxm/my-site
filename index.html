@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Qing Ji 吉庆 | Empirical Industrial Organization</title>
+<meta name="description" content="Qing Ji (吉庆) is an Assistant Professor at the School of Economics and Management, China University of Petroleum (Beijing), researching empirical industrial organization, aviation decarbonization, and environmental regulation."/>
+<meta name="keywords" content="Qing Ji,吉庆,empirical industrial organization,applied microeconomics,applied econometrics,structural estimation,causal inference,aviation carbon emissions,environmental regulation,China University of Petroleum Beijing"/>
+<meta name="author" content="Qing Ji"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Qing Ji 吉庆 | Empirical Industrial Organization"/>
+<meta property="og:description" content="Qing Ji (吉庆) is an Assistant Professor at the School of Economics and Management, China University of Petroleum (Beijing), researching empirical industrial organization, aviation decarbonization, and environmental regulation."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<link rel="stylesheet" href="assets/index.css"/>
+<style>
+  /* 期刊名比原站的状态标签长，补一个间距，避免与左侧编号相撞 */
+  .paper-meta { gap: 16px; }
+  /* 原站简介只有两段，第三段起需要补段间距，取值与 .bio-teaching 一致 */
+  .bio + .bio { margin-top: 18px; }
+
+  /* 年份筛选按钮，尺寸与配色沿用侧栏 .sidebar-tags 的胶囊标签 */
+  .year-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: -12px 0 26px;
+  }
+  .year-filter button {
+    background: var(--mist);
+    color: var(--sage);
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 8px 15px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    cursor: pointer;
+    transition: background .18s, color .18s, border-color .18s;
+  }
+  .year-filter button:hover { border-color: var(--line); color: var(--coral); }
+  .year-filter button.is-active { background: var(--coral); color: #fff; border-color: var(--coral); }
+  .year-filter button:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+  .year-count { opacity: .72; font-weight: 700; }
+  .paper-row[hidden], .education-row[hidden], .teaching-row[hidden] { display: none; }
+
+  /* 原站侧栏每块只有一个链接，多个链接需要各占一行 */
+  .profile-links a { display: block; }
+  .profile-links a + a { margin-top: 9px; }
+  /* 侧栏最后一块贴着页面底部太挤，补一段留白 */
+  .profile-sidebar { padding-bottom: 56px; }
+
+  /* 左侧年份与右侧标题行高不同（13/19.5 对 18/27），盒子顶端虽齐但文字基线差 5.5px。
+     News 的标签是 11/16.5，差 3.5px。分别下压，使基线对齐。 */
+  .education-row time,
+  .teaching-row time { padding-top: 5.5px; }
+  .news-row time { padding-top: 3.5px; }
+
+  /* 论文标题与 Grants 标题统一字号，原为 clamp(23px,2.8vw,32px) */
+  .paper-content h3 { font-size: 21px; line-height: 1.32; margin-top: 14px; }
+  /* 首条论文原有的加大标签会盖过 18px 的标题，回归常规尺寸 */
+  .paper-row:first-child .paper-meta strong { padding: 6px 10px; font-size: 13px; box-shadow: none; }
+
+  /* Biography 中三位合作者的主页链接，正文色加下划线 */
+  .bio a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: rgba(82, 113, 104, .45);
+    transition: color .18s, text-decoration-color .18s;
+  }
+  .bio a:hover { color: var(--coral); text-decoration-color: var(--coral); }
+
+  /* 作者身份标记，用与论文状态标签同族的胶囊，但更小更轻 */
+  .author-role {
+    display: inline-block;
+    margin-left: 9px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--coral-soft);
+    color: var(--coral);
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: 1px;
+  }
+</style>
+</head>
+<body>
+<main id="top">
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="masthead-name" href="#top">QING JI <span>吉庆</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#grants">Grants</a>
+        <a href="#research">Research</a>
+        <a href="#awards">Awards</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#news">News</a>
+      </nav>
+      <a class="masthead-cv" href="CV.pdf" target="_blank" rel="noreferrer">Download CV <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <div class="site-frame">
+    <aside class="profile-sidebar" aria-label="Profile and contact">
+      <div class="portrait-frame">
+        <img src="portrait.jpg" alt="Portrait of Qing Ji" onerror="this.onerror=null;this.src='portrait-placeholder.svg'"/>
+      </div>
+
+      <a class="sidebar-cv" href="CV.pdf" target="_blank" rel="noreferrer">
+        <span><small>Curriculum Vitae</small>Download CV</span>
+        <span aria-hidden="true">↓</span>
+      </a>
+
+      <div class="sidebar-block">
+        <h2>Contact</h2>
+        <a href="mailto:jiqing@cup.edu.cn">jiqing@cup.edu.cn</a>
+        <p>School of Economics and Management<br/>China University of Petroleum (Beijing)<br/>Beijing, China</p>
+      </div>
+
+      <div class="sidebar-block profile-links">
+        <h2>Profiles</h2>
+        <a href="https://scholar.google.com/citations?user=as-k-GcAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+      </div>
+    </aside>
+
+    <article class="main-column">
+      <section class="intro" id="about">
+        <p class="eyebrow">Empirical Industrial Organization</p>
+        <h1>Qing Ji <span>吉庆</span></h1>
+        <div class="role-lines">
+          <strong>Assistant Professor of Economics</strong>
+          <span>School of Economics and Management, China University of Petroleum (Beijing)</span>
+        </div>
+      </section>
+
+      <section class="text-section">
+        <div class="ruled-heading"><span></span><h2>Biography</h2></div>
+        <p class="bio">I am an Assistant Professor at the School of Economics and Management, China University of Petroleum (Beijing). I received my PhD from the School of Economics and Management at Beihang University in 2023, where I was advised by Professor <a href="https://sem.buaa.edu.cn/info/1366/16257.htm" target="_blank" rel="noreferrer">Ying Fan</a> and Associate Professor <a href="https://sem.buaa.edu.cn/info/1366/16263.htm" target="_blank" rel="noreferrer">Chunan Wang</a>, and I spent my doctoral years in a joint training program at North Carolina State University with Professor <a href="https://cals.ncsu.edu/agricultural-and-resource-economics/people/xiaoyong-zheng/" target="_blank" rel="noreferrer">Xiaoyong Zheng</a>.</p>
+        <p class="bio">My research and teaching focus on empirical industrial organization, applied microeconomics, and applied econometrics, with a particular emphasis on using structural estimation and causal inference to address policy relevant questions in environmental regulation and sustainable transportation. Much of my recent work studies the low carbon transition of air transport, covering emission reduction pathways, sustainable aviation fuel adoption, and competition between airlines and high speed rail.</p>
+        <p class="bio bio-teaching">I also serve as an Adjunct Associate Researcher at the Green and Low Carbon Aviation Center of the Laboratory for Low Carbon Governance and Intelligent Policy (LLIG) at Beihang University.</p>
+      </section>
+
+      <section class="text-section interests">
+        <div class="ruled-heading"><span></span><h2>Research Interests</h2></div>
+        <p><strong>Substantive areas:</strong> empirical industrial organization, aviation decarbonization, carbon markets and carbon pricing, automobile markets and vehicle policy, energy and climate policy.</p>
+        <p><strong>Methods:</strong> structural estimation, causal inference, applied econometrics, and game theory.</p>
+      </section>
+
+      <section class="education-section">
+        <div class="major-heading">
+          <p>Background</p>
+          <h2>Education</h2>
+        </div>
+        <div class="education-list">
+          <article class="education-row">
+            <time>2018-2023</time>
+            <div>
+              <h3>PhD in Management Science and Engineering</h3>
+              <p>School of Economics and Management, Beihang University<br/>Department of Agricultural and Resource Economics, North Carolina State University (Joint PhD Training)</p>
+            </div>
+          </article>
+          <article class="education-row">
+            <time>2015-2017</time>
+            <div>
+              <h3>MSc in Industrial Economics</h3>
+              <p>China University of Petroleum (Beijing)</p>
+            </div>
+          </article>
+          <article class="education-row">
+            <time>2010-2014</time>
+            <div>
+              <h3>BEng in Engineering Management</h3>
+              <p>Xi'an Shiyou University</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="education-section" id="grants">
+        <div class="major-heading">
+          <p>Funding</p>
+          <h2>Grants</h2>
+        </div>
+        <div class="year-filter" role="group" aria-label="Filter grants by year" data-target="grant-list">
+          <button type="button" class="is-active" data-year="2026" aria-pressed="true"><span class="year-label">2026</span> <span class="year-count">(1)</span></button>
+          <button type="button" data-year="2024" aria-pressed="false"><span class="year-label">2024</span> <span class="year-count">(1)</span></button>
+          <button type="button" data-year="2023" aria-pressed="false"><span class="year-label">2023</span> <span class="year-count">(1)</span></button>
+          <button type="button" data-year="all" aria-pressed="false"><span class="year-label">All</span> <span class="year-count">(3)</span></button>
+        </div>
+        <div class="education-list" id="grant-list">
+          <article class="education-row" data-year="2026">
+            <time>2026</time>
+            <div>
+              <h3>Carbon Cost Pass Through, Emissions Reduction, and Social Welfare Impacts in the Civil Aviation Industry under Carbon Market Policy</h3>
+              <p>National Natural Science Foundation of China, Young Scientists Fund (Category C), No. 72603376. Principal Investigator, 2027.01 to 2029.12.</p>
+            </div>
+          </article>
+          <article class="education-row" data-year="2024">
+            <time>2024</time>
+            <div>
+              <h3>Optimizing Emission Reduction Pathways for China's Civil Aviation under the Dual Carbon Goals</h3>
+              <p>China Postdoctoral Science Foundation, General Program, No. 2024M763637. Principal Investigator, 2025.01 to 2025.08.</p>
+            </div>
+          </article>
+          <article class="education-row" data-year="2023">
+            <time>2023</time>
+            <div>
+              <h3>Emission Reduction Pathways and Policies for China's Civil Aviation under the Dual Carbon Goals</h3>
+              <p>Fundamental Research Funds for the Central Universities, No. ZX20230268. Principal Investigator, 2023.07 to 2025.12.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="research-section" id="research">
+        <div class="major-heading">
+          <p>Selected Research</p>
+          <h2>Publications</h2>
+        </div>
+        <div class="year-filter" role="group" aria-label="Filter publications by year" data-target="publication-list">
+          <button type="button" class="is-active" data-year="2026" aria-pressed="true"><span class="year-label">2026</span> <span class="year-count">(5)</span></button>
+          <button type="button" data-year="2025" aria-pressed="false"><span class="year-label">2025</span> <span class="year-count">(3)</span></button>
+          <button type="button" data-year="2024" aria-pressed="false"><span class="year-label">2024</span> <span class="year-count">(2)</span></button>
+          <button type="button" data-year="2022" aria-pressed="false"><span class="year-label">2022</span> <span class="year-count">(1)</span></button>
+          <button type="button" data-year="all" aria-pressed="false"><span class="year-label">All</span> <span class="year-count">(11)</span></button>
+        </div>
+        <div class="paper-list" id="publication-list">
+          <article class="paper-row" data-year="2026">
+            <div class="paper-illustration">
+              <img src="paper-art/ev-subsidies.svg" alt="Line illustration of an electric vehicle and a charging bolt"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>01</span>
+                <strong>JAERE, 2026</strong>
+              </div>
+              <h3>Quantifying the welfare effects of electric vehicle subsidies: Evidence from China</h3>
+              <p class="coauthors"><strong>Qing Ji</strong>, Chunan Wang, Xiaoyong Zheng, Ying Fan<span class="author-role">First author</span></p>
+              <p class="paper-description"><em>Journal of the Association of Environmental and Resource Economists</em>, 13(1), 1 to 40.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1086/737533" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2026">
+            <div class="paper-illustration">
+              <img src="paper-art/hsr-aviation.svg" alt="Line illustration of a high-speed train and an aircraft"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>02</span>
+                <strong>TRA, 2026</strong>
+              </div>
+              <h3>Is the opening of high-speed rail conducive to aviation carbon reduction? Evidence from Beijing-Shanghai market in China</h3>
+              <p class="coauthors"><strong>Qing Ji</strong>, Shuai Yue, Chunan Wang, Ying Fan<span class="author-role">First author</span></p>
+              <p class="paper-description"><em>Transportation Research Part A: Policy and Practice</em>, 205, 104865.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.tra.2026.104865" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2026">
+            <div class="paper-illustration">
+              <img src="paper-art/fuel-tradeoff.svg" alt="Line illustration of a balance weighing fuel against emissions"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>03</span>
+                <strong>TRD, 2026</strong>
+              </div>
+              <h3>Penny wise, emission foolish? Quantifying the economic and environmental trade-offs of fuel tankering strategy</h3>
+              <p class="coauthors">Shuai Yue, <strong>Qing Ji</strong>, Chunan Wang, Changmin Jiang, Anming Zhang</p>
+              <p class="paper-description"><em>Transportation Research Part D: Transport and Environment</em>, 158, 105470.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.trd.2026.105470" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2026">
+            <div class="paper-illustration">
+              <img src="paper-art/uneven-skies.svg" alt="Line illustration of a globe with a flight path"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>04</span>
+                <strong>TRD, 2026</strong>
+              </div>
+              <h3>Uneven skies: Long-term global inventory and equity analysis of aviation emissions</h3>
+              <p class="coauthors">Weijun Liao, Shuai Yue, Xiaoqian Wang, Fangyu Cao, <strong>Qing Ji</strong>, Chunan Wang, Ying Fan</p>
+              <p class="paper-description"><em>Transportation Research Part D: Transport and Environment</em>, 154, 105286.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.trd.2026.105286" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2026">
+            <div class="paper-illustration">
+              <img src="paper-art/cleaner-skies.svg" alt="Line illustration of a leaf and an aircraft"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>05</span>
+                <strong>TRA, 2026</strong>
+              </div>
+              <h3>Cleaner skies, greener flights: Empirical evidence from China</h3>
+              <p class="coauthors">Chunan Wang, Yingying Yin, Shuai Yue, <strong>Qing Ji</strong>, Weijun Liao</p>
+              <p class="paper-description"><em>Transportation Research Part A: Policy and Practice</em>, 204, 104853.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.tra.2025.104853" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2025">
+            <div class="paper-illustration">
+              <img src="paper-art/fuel-tankering.svg" alt="Line illustration of an aircraft and a fuel tank"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>06</span>
+                <strong>TRE, 2025</strong>
+              </div>
+              <h3>Environmental and welfare effects of airline fuel tankering strategy</h3>
+              <p class="coauthors">Chunan Wang, Shuai Yue, Weijun Liao, <strong>Qing Ji</strong>, Anming Zhang<span class="author-role">Corresponding author</span></p>
+              <p class="paper-description"><em>Transportation Research Part E: Logistics and Transportation Review</em>, 202, 104337.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.tre.2025.104337" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2025">
+            <div class="paper-illustration">
+              <img src="paper-art/meteorology.svg" alt="Line illustration of clouds above an aircraft on a runway"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>07</span>
+                <strong>TEAM, 2025</strong>
+              </div>
+              <h3>Meteorological impacts on aviation carbon emissions during takeoff and landing at 25 major global airports</h3>
+              <p class="coauthors">Xin Liu, Chen Mao, Shuai Yue, <strong>Qing Ji</strong>, Chunan Wang</p>
+              <p class="paper-description"><em>Transport Economics and Management</em>, 3, 346 to 365.</p>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2025">
+            <div class="paper-illustration">
+              <img src="paper-art/financial-perf.svg" alt="Line illustration of a performance chart and an aircraft"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>08</span>
+                <strong>JATM, 2025</strong>
+              </div>
+              <h3>The effect of financial performance on aviation carbon emissions</h3>
+              <p class="coauthors">Shuai Yue, Weijun Liao, <strong>Qing Ji</strong>, Chunan Wang</p>
+              <p class="paper-description"><em>Journal of Air Transport Management</em>, 126, 102800.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.jairtraman.2025.102800" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2024">
+            <div class="paper-illustration">
+              <img src="paper-art/liberalization.svg" alt="Line illustration of city nodes connected by route arcs"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>09</span>
+                <strong>TP, 2024</strong>
+              </div>
+              <h3>Environmental and social welfare effects of aviation liberalization: Evidence from Central Asia and China market</h3>
+              <p class="coauthors"><strong>Qing Ji</strong>, Weijun Liao, Chunan Wang, Ying Fan<span class="author-role">Co-first author (1/2)</span></p>
+              <p class="paper-description"><em>Transport Policy</em>, 159, 44 to 56.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.tranpol.2024.10.005" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2024">
+            <div class="paper-illustration">
+              <img src="paper-art/carbon-network.svg" alt="Line illustration of an airline network and a price tag"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>10</span>
+                <strong>TEAM, 2024</strong>
+              </div>
+              <h3>Carbon pricing and airline network selection: A four-network perspective</h3>
+              <p class="coauthors">Weijun Liao, Yingying Yin, <strong>Qing Ji</strong>, Chunan Wang</p>
+              <p class="paper-description"><em>Transport Economics and Management</em>, 2, 227 to 241.</p>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2022">
+            <div class="paper-illustration">
+              <img src="paper-art/purchase-tax.svg" alt="Line illustration of a vehicle and a tax tag"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>11</span>
+                <strong>EE, 2022</strong>
+              </div>
+              <h3>Environmental and welfare effects of vehicle purchase tax: Evidence from China</h3>
+              <p class="coauthors"><strong>Qing Ji</strong>, Chunan Wang, Ying Fan<span class="author-role">Co-first author (1/3)</span></p>
+              <p class="paper-description"><em>Energy Economics</em>, 115, 106377.</p>
+              <div class="paper-links">
+                <a href="https://doi.org/10.1016/j.eneco.2022.106377" target="_blank" rel="noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="research-section" id="awards">
+        <div class="major-heading">
+          <p>Recognition</p>
+          <h2>Awards</h2>
+        </div>
+        <div class="year-filter" role="group" aria-label="Filter awards by year" data-target="award-list">
+          <button type="button" class="is-active" data-year="2026" aria-pressed="true"><span class="year-label">2026</span> <span class="year-count">(1)</span></button>
+          <button type="button" data-year="2025" aria-pressed="false"><span class="year-label">2025</span> <span class="year-count">(1)</span></button>
+          <button type="button" data-year="all" aria-pressed="false"><span class="year-label">All</span> <span class="year-count">(2)</span></button>
+        </div>
+        <div class="paper-list" id="award-list">
+          <article class="paper-row" data-year="2026">
+            <div class="paper-illustration">
+              <img src="paper-art/hsr-speedup.svg" alt="Line illustration of an accelerating high-speed train and a descending flight curve"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>01</span>
+                <strong>ATRS China Chapter Best Paper Award, 2026</strong>
+              </div>
+              <h3>Impacts of high-speed rail speed-up on China's aviation industry during 2026-2030: Based on weighted similarity algorithms and machine learning</h3>
+              <p class="coauthors">Chunan Wang, Yuqing Hu, Xiaoqian Wang, Tianyi Bi, Yingying Yin, Weijun Liao, <strong>Qing Ji</strong><span class="author-role">Corresponding author</span></p>
+              <p class="paper-description">Awarded at the 29th World Conference of the Air Transport Research Society, Beijing, July 2026.</p>
+            </div>
+          </article>
+
+          <article class="paper-row" data-year="2025">
+            <div class="paper-illustration">
+              <img src="paper-art/conflict-routes.svg" alt="Line illustration of disrupted flight routes across a globe"/>
+            </div>
+            <div class="paper-content">
+              <div class="paper-meta">
+                <span>02</span>
+                <strong>Best Overall Paper Award, 2025</strong>
+              </div>
+              <h3>Unintended social loss due to Russia-Ukraine airspace closures: 1.2 million tons of CO2 and $14.74 billion social welfare loss annually for airline industry</h3>
+              <p class="coauthors">Chunan Wang, <strong>Qing Ji</strong>, Weijun Liao, Ying Cheng, Fangyu Cao, Nieyan Cheng, Huijuan Xiao, Shuai Yue, Changmin Jiang, Jingzheng Ren, Kun Wang, Ying Fan, Anming Zhang<span class="author-role">Co-first author (2/3)</span></p>
+              <p class="paper-description">Sole recipient of the Best Overall Paper Award at the 28th World Conference of the Air Transport Research Society, Hong Kong, July 2025.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="teaching-section" id="teaching">
+        <div class="major-heading">
+          <p>Courses</p>
+          <h2>Teaching</h2>
+        </div>
+        <div class="year-filter" role="group" aria-label="Filter courses by year" data-target="teaching-list">
+                    <button type="button" class="is-active" data-year="2026" aria-pressed="true"><span class="year-label">2026</span> <span class="year-count">(3)</span></button>
+          <button type="button" data-year="2025" aria-pressed="false"><span class="year-label">2025</span> <span class="year-count">(3)</span></button>
+          <button type="button" data-year="2024" aria-pressed="false"><span class="year-label">2024</span> <span class="year-count">(1)</span></button>
+          <button type="button" data-year="all" aria-pressed="false"><span class="year-label">All</span> <span class="year-count">(7)</span></button>
+        </div>
+        <div class="teaching-list" id="teaching-list">
+          <article class="teaching-row" data-year="2026">
+            <time>Spring 2026</time>
+            <div>
+              <h3>Empirical Industrial Organization</h3>
+              <p>China University of Petroleum (Beijing)</p>
+              <span>Graduate course</span>
+            </div>
+          </article>
+          <article class="teaching-row" data-year="2026">
+            <time>Spring 2026</time>
+            <div>
+              <h3>Macroeconomics</h3>
+              <p>China University of Petroleum (Beijing)</p>
+              <span>Undergraduate course</span>
+            </div>
+          </article>
+          <article class="teaching-row" data-year="2026">
+            <time>Spring 2026</time>
+            <div>
+              <h3>AI and Energy Big Data Analytics</h3>
+              <p>China University of Petroleum (Beijing)</p>
+              <span>Undergraduate course</span>
+            </div>
+          </article>
+          <article class="teaching-row" data-year="2025">
+            <time>Spring 2025</time>
+            <div>
+              <h3>Empirical Industrial Organization</h3>
+              <p>China University of Petroleum (Beijing)</p>
+              <span>Graduate course</span>
+            </div>
+          </article>
+          <article class="teaching-row" data-year="2025">
+            <time>Spring 2025</time>
+            <div>
+              <h3>Macroeconomics</h3>
+              <p>China University of Petroleum (Beijing)</p>
+              <span>Undergraduate course</span>
+            </div>
+          </article>
+          <article class="teaching-row" data-year="2025">
+            <time>Spring 2025</time>
+            <div>
+              <h3>Energy Big Data Analytics</h3>
+              <p>China University of Petroleum (Beijing)</p>
+              <span>Undergraduate course</span>
+            </div>
+          </article>
+          <article class="teaching-row" data-year="2024">
+            <time>Spring 2024</time>
+            <div>
+              <h3>Energy Big Data Analytics</h3>
+              <p>China University of Petroleum (Beijing)</p>
+              <span>Undergraduate course</span>
+            </div>
+          </article>
+</div>
+      </section>
+
+      <section class="news-section" id="news">
+        <div class="major-heading">
+          <p>Updates</p>
+          <h2>Recent News</h2>
+        </div>
+        <div class="news-list">
+          <article class="news-row">
+            <time>August 2026</time>
+            <div>
+              <span>Grant</span>
+              <p>My project on carbon cost pass through, emissions reduction, and social welfare impacts in the civil aviation industry under carbon market policy is funded by the National Natural Science Foundation of China under the Young Scientists Fund.</p>
+            </div>
+          </article>
+          <article class="news-row">
+            <time>July 2026</time>
+            <div>
+              <span>Award</span>
+              <p>Our paper on the impacts of high speed rail speed-up on China's aviation industry received the ATRS China Chapter Best Paper Award at the 29th World Conference of the Air Transport Research Society in Beijing.</p>
+            </div>
+          </article>
+          <article class="news-row">
+            <time>July 2025</time>
+            <div>
+              <span>Award</span>
+              <p>Our paper on the unintended social loss due to Russia-Ukraine airspace closures received the sole Best Overall Paper Award at the 28th World Conference of the Air Transport Research Society in Hong Kong.</p>
+            </div>
+          </article>
+</div>
+      </section>
+
+      <footer>
+        <span>© 2026.09 Qing Ji</span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  // 一套逻辑驱动 Grants、Publications、Awards、Teaching 四处筛选栏
+  var ROW = '.paper-row, .education-row, .teaching-row';
+  var CURRENT_YEAR = String(new Date().getFullYear());
+
+  Array.prototype.forEach.call(document.querySelectorAll('.year-filter'), function (filter) {
+    var list = document.getElementById(filter.dataset.target);
+    if (!list) return;
+
+    var rows = Array.prototype.slice.call(list.querySelectorAll(ROW));
+    if (!rows.length) return;
+
+    // 年份与计数都从实际条目算出，新增条目后按钮会自动增减，无需手改
+    var years = [];
+    var counts = {};
+    rows.forEach(function (r) {
+      var y = r.dataset.year;
+      if (!y) return;
+      if (counts[y] === undefined) { counts[y] = 0; years.push(y); }
+      counts[y] += 1;
+    });
+    years.sort().reverse();
+
+    function label(text, n) {
+      return '<span class="year-label">' + text + '</span> <span class="year-count">(' + n + ')</span>';
+    }
+
+    filter.innerHTML = years.concat(['all']).map(function (y) {
+      var n = y === 'all' ? rows.length : counts[y];
+      return '<button type="button" data-year="' + y + '" aria-pressed="false">' +
+             label(y === 'all' ? 'All' : y, n) + '</button>';
+    }).join('');
+
+    var buttons = Array.prototype.slice.call(filter.querySelectorAll('button'));
+
+    function apply(year) {
+      rows.forEach(function (row) {
+        row.hidden = year !== 'all' && row.dataset.year !== year;
+      });
+      buttons.forEach(function (b) {
+        var on = b.dataset.year === year;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+
+    filter.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (b) apply(b.dataset.year);
+    });
+
+    // 默认选中当前年份，该年份无条目时退回最近的一年，避免开屏是空列表
+    apply(years.indexOf(CURRENT_YEAR) !== -1 ? CURRENT_YEAR : (years[0] || 'all'));
+  });
+})();
+</script>
+</body>
+</html>

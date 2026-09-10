@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1365 2048" width="1365" height="2048">
+<rect width="1365" height="2048" fill="#eef1f0"/>
+<circle cx="682" cy="820" r="235" fill="#dce3e1"/>
+<path d="M682 1120c-290 0-470 190-470 430v498h940v-498c0-240-180-430-470-430z" fill="#dce3e1"/>
+<text x="682" y="1870" font-family="Avenir Next, Arial, sans-serif" font-size="64" fill="#8a938f" text-anchor="middle">Portrait</text>
+</svg>
