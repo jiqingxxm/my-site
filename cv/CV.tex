@@ -1,0 +1,202 @@
+% LaTeX Curriculum Vitae Template
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+
+\PassOptionsToPackage{quiet}{fontspec}
+\documentclass[letterpaper]{article}
+\usepackage{hyperref,geometry,bookmark}
+\usepackage[UTF8]{ctex}
+\usepackage{fontenc}
+\usepackage{enumitem}
+\usepackage{sectsty}
+
+% Set your name here
+\def\name{吉庆}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\ftlink{http://llig.buaa.edu.cn/info/1017/1280.htm}
+
+% Print the month and year
+% \renewcommand{\today}{\ifcase \month \or January \or February \or March \or April \or May %
+% \or June\or July\or August\or September\or October \or November\or December\fi%
+% \space \number \year}
+\renewcommand{\today}{\number\year 年 \number\month 月}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  % colorlinks = true,
+  % urlcolor = black,
+  pdfauthor = {Qing Ji},
+  pdfkeywords = {Economics; Econometrics; Empirical Industrial Organization; Applied Microeconomics},
+  pdftitle = {Qing Ji, Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 9.0in},
+  left=1.0in,
+  top=1.0in
+}
+
+% Customize page headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header fields and footer fields
+\newcommand{\helv}{\fontsize{9.5pt}{9.5pt}\selectfont} % 9.5号字体，单倍行间距
+% \fancyhead[L]{\helv \name}
+% \fancyhead[R]{\helv 更新日期：\today}
+\fancyfoot[C]{\helv \thepage}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{0pt}
+\thispagestyle{empty} % empty for first page
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily \mdseries \Large}
+\subsectionfont{\rmfamily \mdseries \large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0in}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.2in}
+    \setlength{\itemsep}{0.15in}
+    \setlength{\parskip}{0.05in}
+    \setlength{\parsep}{0.05in}
+  }
+}{
+  \end{list}
+}
+\setlist[enumerate]{itemsep=0.15in}
+
+\begin{document}
+
+% Place name at left
+{\huge \bf \name}
+
+\bigskip
+
+% \begin{center}
+  \begin{tabular}{ll}
+    学校：& 中国石油大学（北京）经济管理学院 \\
+    职称：& 讲师 \\
+    邮箱：& jiqing@cup.edu.cn
+  \end{tabular}
+% \end{center}
+
+\section*{个人简介}
+\hrule
+\vspace{0.25cm}
+吉庆，中国石油大学（北京）经济管理学院讲师，北京航空航天大学管理学博士，博士期间与美国北卡罗来纳州立大学开展线上联合培养。兼任北京航空航天大学低碳治理与政策智能实验室“绿色低碳航空中心”副研究员。研究领域为资源与环境经济、交通运输管理、交通碳减排和低空经济，注重将结构计量经济学、因果推断和机器学习等方法应用于交通与能源领域的政策评估，围绕碳排放权交易、航空与高铁竞争合作、新能源汽车补贴等问题开展实证研究。主持国家自然科学基金、中国博士后科学基金和中央高校等科研项目，参与国家重点研发计划、国家自然科学基金重大项目、重点项目、面上项目和青年项目等科研任务。研究成果发表于{\it Journal of the Association of Environmental and Resource Economists}、{\it Transportation Research Part A/D/E}、{\it Energy Economics}、{\it Transport Policy}和{\it Journal of Air Transport Management}等国内外权威期刊，并获第28届世界航空运输学会世界大会唯一最佳论文奖（Best Overall Paper Award）和第29届世界航空运输学会世界大会中国分会最佳论文奖（China Chapter Best Paper Award）。
+
+\section*{研究方向}
+\hrule
+\vspace{0.25cm}
+  \begin{itemize}
+    \item 资源与环境经济、交通运输管理、交通碳减排、低空经济
+  \end{itemize}
+
+\section*{教育背景}
+\hrule
+\vspace{0.25cm}
+  \begin{itemize}
+    \item 博士（2018.09 - 2023.01）：北京航空航天大学，经济管理学院，管理科学与工程
+      \begin{itemize}
+        \item 指导老师：\href{http://sem.buaa.edu.cn/szdw/yyjjx/fy/jbxx.htm}{范英教授}（二级教授、教育部长江学者特聘教授等）\\
+        指导老师：\href{https://shi.buaa.edu.cn/wangbuaa08/zh_CN/index.htm}{王楚男副教授}（北航青年拔尖人才）\\
+        博士学位论文题目：《交通部门中政策工具的环境影响研究》
+      \end{itemize}
+    \item 博士（2018.09 - 2023.01，联合培养）：北卡罗来纳州立大学，农业资源与经济系，实证产业组织
+      \begin{itemize}
+        \item 指导老师：\href{https://cals.ncsu.edu/agricultural-and-resource-economics/people/xiaoyong-zheng/}{郑霄勇教授}（美国农业经济学期刊副主编、农业与食品工业组织副主编等）\\
+        研究内容：建立政策影响的综合评估结构模型，包含消费者、生产者、政府和社会外部性四部分
+      \end{itemize}
+    \item 硕士（2015.09 - 2017.06）：中国石油大学（北京），经济管理学院，产业经济学
+      \begin{itemize}
+        \item 指导老师：\href{https://www.cup.edu.cn/sba/szdwgb/yyjjxgb/l2/177732.htm}{刘毅军教授}（中国石油学会天然气专业委员会经济学组委员、《天然气工业》编委等）\\
+        研究内容：能源经济与政策（天然气）
+      \end{itemize}
+    \item 学士（2010.09 - 2014.06）：西安石油大学，经济管理学院，工程管理
+  \end{itemize}
+
+\section*{工作经历}
+\hrule
+\vspace{0.25cm}
+  \begin{itemize}
+    \item 讲师（2023.07 - 至今）：中国石油大学（北京），经济管理学院，应用经济系
+    \item 博士后（2023.07 - 2025.09）：中国石油大学（北京）
+  \end{itemize}
+
+\section*{学术成果}
+\hrule
+\vspace{0.25cm}
+  \begin{enumerate}
+    \item \textbf{Qing Ji}, Chunan Wang*, Xiaoyong Zheng, Ying Fan*. Quantifying the Welfare Effects of Electric Vehicle Subsidies: Evidence from China[J]. {\it Journal of the Association of Environmental and Resource Economists}, 2026, 13(1): 1-40.
+    \item \textbf{Qing Ji}, Shuai Yue, Chunan Wang*, Ying Fan. Is the Opening of High-Speed Rail Conducive to Aviation Carbon Reduction? Evidence from Beijing-Shanghai Market in China[J]. {\it Transportation Research Part A: Policy and Practice}, 2026, 205: 104865.
+    \item Chunan Wang, Yingying Yin, Shuai Yue, \textbf{Qing Ji}, Weijun Liao*. Cleaner Skies, Greener Flights: Empirical Evidence from China[J]. {\it Transportation Research Part A: Policy and Practice}, 2026, 204: 104853.
+    \item Weijun Liao, Shuai Yue, Xiaoqian Wang, Fangyu Cao, \textbf{Qing Ji}, Chunan Wang*, Ying Fan. Uneven Skies: Long-Term Global Inventory and Equity Analysis of Aviation Emissions[J]. {\it Transportation Research Part D: Transport and Environment}, 2026, 154: 105286.
+    \item Shuai Yue, \textbf{Qing Ji}, Chunan Wang*, Changmin Jiang, Anming Zhang. Penny Wise, Emission Foolish? Quantifying the Economic and Environmental Trade-Offs of Fuel Tankering Strategy[J]. {\it Transportation Research Part D: Transport and Environment}, 2026, 158: 105470.
+    \item Chunan Wang, Shuai Yue, Weijun Liao, \textbf{Qing Ji}*, Anming Zhang. Environmental and Welfare Effects of Airline Fuel Tankering Strategy[J]. {\it Transportation Research Part E: Logistics and Transportation Review}, 2025, 202: 104337.
+    \item Shuai Yue, Weijun Liao, \textbf{Qing Ji}, Chunan Wang*. The Effect of Financial Performance on Aviation Carbon Emissions[J]. {\it Journal of Air Transport Management}, 2025, 126: 102800.
+    \item Xiaokang Liu, Chengze Mao, Shuai Yue, \textbf{Qing Ji}, Chunan Wang*. Meteorological Impacts on Aviation Carbon Emissions during Takeoff and Landing at 25 Major Global Airports[J]. {\it Transport Economics and Management}, 2025, 3: 346-365.
+    \item \textbf{Qing Ji}, Weijun Liao, Chunan Wang*, Ying Fan*. Environmental and Social Welfare Effects of Aviation Liberalization: Evidence from Central Asia and China Market[J]. {\it Transport Policy}, 2024, 159: 44-56.
+    \item Weijun Liao, Yingying Yin, \textbf{Qing Ji}, Chunan Wang*. Carbon Pricing and Airline Network Selection: A Four-Network Perspective[J]. {\it Transport Economics and Management}, 2024, 2: 227-241.
+    \item \textbf{Qing Ji}, Chunan Wang, Ying Fan*. Environmental and Welfare Effects of Vehicle Purchase Tax: Evidence from China[J]. {\it Energy Economics}, 2022, 115: 106377.
+  \end{enumerate}
+
+\section*{科研项目}
+\hrule
+\vspace{0.25cm}
+\textbf{主持项目}
+  \begin{enumerate}
+    \item 国家自然科学基金青年科学基金项目：“碳市场政策下民航业碳成本传导机制、减排效果与社会福利影响研究”（批准号：72603376），2027.01 - 2029.12，主持
+    \item 中国博士后科学基金面上项目：“‘双碳’目标下我国航空业减排路径优化与方案设计”（批准号：2024M763637），2025.01 - 2025.08，主持
+    \item 中央高校基本科研业务费项目：“‘双碳’目标下我国航空业减排路径与政策研究”（批准号：ZX20230268），2023.07 - 2025.12，主持
+  \end{enumerate}
+
+\medskip
+\textbf{参与项目}
+
+参与国家重点研发计划、国家自然科学基金重大项目、重点项目、面上项目和青年项目以及教育部科研项目等多项国家级和省部级科研任务。
+
+\section*{奖项与荣誉}
+\hrule
+\vspace{0.25cm}
+  \begin{itemize}
+    \item 2026年，第29届ATRS中国分会最佳论文奖（China Chapter Best Paper Award）
+    \item 2025年，第28届ATRS唯一最佳论文奖（Best Overall Paper Award）
+    \item 2022年，第八届全国大学生能源经济学术创意大赛“斯伦贝谢杯”北航赛区二等奖
+    \item 2018、2019、2020、2021年，北京航空航天大学学业奖学金
+    \item 2016年，国家能源局2015年度能源软科学研究优秀成果三等奖
+    \item 2015、2016年，中国石油大学（北京）学业奖学金
+  \end{itemize}
+
+\section*{学术兼职}
+\hrule
+\vspace{0.25cm}
+  \begin{itemize}
+    \item 北京航空航天大学低碳治理与政策智能实验室“绿色低碳航空中心”副研究员
+    \item 中国系统工程学会能源资源系统工程分会会员
+    \item 担任国际期刊《Transportation Research Part A: Policy and Practice》、《Transportation Research Part D: Transport and Environment》、《Energy Economics》、《Transport Policy》、《Journal of Air Transport Management》、《Transport Economics and Management》、《Frontiers in Energy Research》等匿名审稿人
+  \end{itemize}
+\bigskip
+
+% Footer
+\begin{flushright}
+  \begin{footnotesize}
+    更新日期：\today \\
+  \end{footnotesize}
+\end{flushright}
+
+\end{document}
