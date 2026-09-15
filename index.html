@@ -105,6 +105,20 @@
   .collab-map-marker text { fill: var(--sage-deep); font-size: 12px; font-weight: 800; }
   .collab-map-marker--home circle { fill: var(--sage-deep); stroke: var(--paper); stroke-width: 2; }
   .collab-map-marker--home text { font-size: 13px; }
+
+  /* 侧栏绿框：访问量与点赞（白字，沿用 .sidebar-cv 的绿底尺寸） */
+  .sidebar-stats { background: var(--coral); color: #fff; min-height: 76px; margin-top: 16px; padding: 15px 20px; max-width: 340px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+  .sidebar-stats > small { color: #ffffffb8; letter-spacing: .12em; text-transform: uppercase; font-size: 10px; font-weight: 600; text-align: center; }
+  .sidebar-stats .stats-row { display: flex; align-items: center; justify-content: center; gap: 22px; }
+  .sidebar-stats .stat { display: inline-flex; align-items: center; gap: 7px; color: #fff; }
+  .sidebar-stats .stat-ico { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .sidebar-stats .stat-lbl { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: #ffffffcc; }
+  .sidebar-stats .stat-num { font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .sidebar-stats .stat-like { background: none; border: 0; padding: 0; margin: 0; font: inherit; cursor: pointer; transition: opacity .18s, transform .12s; }
+  .sidebar-stats .stat-like:hover { opacity: .82; }
+  .sidebar-stats .stat-like:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .sidebar-stats .stat-like.is-liked .stat-ico { fill: #fff; }
+  .sidebar-stats .stat-like.is-bump { transform: scale(1.1); }
 </style>
 </head>
 <body>
@@ -130,10 +144,21 @@
         <img src="portrait.jpg" alt="Portrait of Qing Ji" onerror="this.onerror=null;this.src='portrait-placeholder.svg'"/>
       </div>
 
-      <a class="sidebar-cv" href="cv/CV.pdf" target="_blank" rel="noreferrer">
-        <span><small>Curriculum Vitae</small>Download CV</span>
-        <span aria-hidden="true">↓</span>
-      </a>
+      <div class="sidebar-stats">
+        <small>Page stats</small>
+        <div class="stats-row">
+          <span class="stat" title="Total page views">
+            <svg class="stat-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="stat-lbl">Views</span>
+            <b class="stat-num" id="busuanzi_value_site_pv">·</b>
+          </span>
+          <button type="button" class="stat stat-like" id="likeBtn" aria-pressed="false" aria-label="Like this page">
+            <svg class="stat-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.35-9.5-8.5C1 8.5 2.5 5.5 5.5 5.5c2 0 3.2 1.2 4 2.3.8-1.1 2-2.3 4-2.3 3 0 4.5 3 3 6-2.5 4.15-9.5 8.5-9.5 8.5Z"/></svg>
+            <span class="stat-lbl">Likes</span>
+            <b class="stat-num" id="likeCount">·</b>
+          </button>
+        </div>
+      </div>
 
       <div class="sidebar-block">
         <h2>Contact</h2>
@@ -630,7 +655,7 @@
       </section>
 
       <footer>
-        <span>© 2026.09 Qing Ji</span>
+        <span>© 2026 Qing Ji</span>
         <a href="#top">Back to top ↑</a>
       </footer>
     </article>
@@ -691,6 +716,40 @@
 
     // 默认选中当前年份，该年份无条目时退回最近的一年，避免开屏是空列表
     apply(years.indexOf(CURRENT_YEAR) !== -1 ? CURRENT_YEAR : (years[0] || 'all'));
+  });
+})();
+</script>
+<!-- 访问量：Vercount（busuanzi 兼容，HTTPS、免注册） -->
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+(function () {
+  // 点赞：Abacus 免注册计数 API，一次性点赞 + 浏览器本地去重
+  var API = 'https://abacus.jasoncameron.dev';
+  var NS = 'jiqingxxm-github-io-home', KEY = 'likes', LS = 'qingji_liked';
+  var btn = document.getElementById('likeBtn'), out = document.getElementById('likeCount');
+  if (!btn || !out) return;
+  var liked = false;
+  try { liked = localStorage.getItem(LS) === '1'; } catch (e) {}
+  function paint(n) {
+    if (typeof n === 'number' && !isNaN(n)) out.textContent = n;
+    btn.classList.toggle('is-liked', liked);
+    btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+  }
+  fetch(API + '/get/' + NS + '/' + KEY)
+    .then(function (r) { return r.ok ? r.json() : { value: 0 }; })
+    .then(function (d) { paint(typeof d.value === 'number' ? d.value : 0); })
+    .catch(function () { paint(0); });
+  btn.addEventListener('click', function () {
+    if (liked) return;
+    liked = true;
+    try { localStorage.setItem(LS, '1'); } catch (e) {}
+    btn.classList.add('is-bump');
+    setTimeout(function () { btn.classList.remove('is-bump'); }, 180);
+    fetch(API + '/hit/' + NS + '/' + KEY)
+      .then(function (r) { return r.json(); })
+      .then(function (d) { paint(d.value); })
+      .catch(function () {});
+    paint();
   });
 })();
 </script>
