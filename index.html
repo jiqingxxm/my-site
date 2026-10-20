@@ -53,11 +53,16 @@
   /* 侧栏最后一块贴着页面底部太挤，补一段留白 */
   .profile-sidebar { padding-bottom: 56px; }
 
-  /* 左侧年份与右侧标题行高不同（13/19.5 对 18/27），盒子顶端虽齐但文字基线差 5.5px。
-     News 的标签是 11/16.5，差 3.5px。分别下压，使基线对齐。 */
+  /* 左侧年份与右侧标题行高不同（13/19.5 对 18/27），盒子顶端虽齐但文字基线差 5.5px，下压使基线对齐。 */
   .education-row time,
   .teaching-row time { padding-top: 5.5px; }
-  .news-row time { padding-top: 3.5px; }
+  /* News 的日期（13px）与标签（11px 大写）字号不同，按基线对齐会显得标签偏低。
+     两者用相同行高、各占一行盒子，使文字在同一高度上垂直居中。 */
+  .news-row time,
+  .news-row > div > span { display: block; line-height: 20px; }
+
+  /* 论文配图在整行内垂直居中，基础样式为 align-self: start（顶对齐） */
+  .paper-illustration { align-self: center; }
 
   /* 论文标题与 Grants 标题统一字号，原为 clamp(23px,2.8vw,32px) */
   .paper-content h3 { font-size: 21px; line-height: 1.32; margin-top: 14px; }
