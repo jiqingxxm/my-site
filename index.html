@@ -50,9 +50,6 @@
   .year-count { opacity: .72; font-weight: 700; }
   .paper-row[hidden], .education-row[hidden], .teaching-row[hidden] { display: none; }
 
-  /* 原站侧栏每块只有一个链接，多个链接需要各占一行 */
-  .profile-links a { display: block; }
-  .profile-links a + a { margin-top: 9px; }
   /* 侧栏最后一块贴着页面底部太挤，补一段留白 */
   .profile-sidebar { padding-bottom: 56px; }
 
@@ -113,6 +110,15 @@
   .sidebar-stats .stat-like:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
   .sidebar-stats .stat-like.is-liked .stat-ico { fill: #fff; }
   .sidebar-stats .stat-like.is-bump { transform: scale(1.1); }
+  /* 绿框下半部分：学术主页链接，白色圆底图标 + 小号名称，与上方统计用细线分隔 */
+  .sidebar-stats .stats-profiles { display: flex; justify-content: center; gap: 18px; margin-top: 4px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .18); }
+  .sidebar-stats .stats-profiles a { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 54px; color: #fff; }
+  .sidebar-stats .sp-badge { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .24); transition: background .18s, transform .18s; }
+  .sidebar-stats .sp-badge svg { width: 16px; height: 16px; fill: currentColor; }
+  .sidebar-stats .sp-name { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: #ffffffcc; transition: color .18s; }
+  .sidebar-stats .stats-profiles a:hover .sp-badge { background: rgba(255, 255, 255, .28); transform: translateY(-1px); }
+  .sidebar-stats .stats-profiles a:hover .sp-name { color: #fff; }
+  .sidebar-stats .stats-profiles a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; border-radius: 6px; }
 </style>
 </head>
 <body>
@@ -153,6 +159,20 @@
             <b class="stat-num" id="likeCount">·</b>
           </button>
         </div>
+        <div class="stats-profiles">
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=57946780600" target="_blank" rel="noopener noreferrer" aria-label="Scopus" title="Scopus">
+            <span class="sp-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12"/><path transform="translate(4.5 4.5) scale(.625)" style="fill:#527168" d="M24 19.059l-.14-1.777c-1.426.772-2.945 1.076-4.465 1.076-3.319 0-5.96-2.782-5.96-6.475 0-3.903 2.595-6.31 5.633-6.31 1.917 0 3.39.303 4.792 1.075L24 4.895c-1.286-.608-2.337-.889-4.698-.889-4.534 0-7.97 3.53-7.97 8.017 0 5.12 4.09 7.924 7.9 7.924 1.916 0 3.506-.257 4.768-.888zm-14.954-3.46c0-2.22-1.964-3.225-3.857-4.347C3.716 10.364 2.15 9.756 2.15 8.12c0-1.215.889-2.548 2.642-2.548 1.519 0 2.57.234 3.903 1.029l.117-1.847c-1.239-.514-2.127-.748-4.137-.748C1.8 4.006.047 5.876.047 8.26c0 2.384 2.103 3.413 4.02 4.581 1.426.865 2.922 1.45 2.922 2.992 0 1.496-1.333 2.571-2.922 2.571-1.566 0-2.594-.35-3.786-1.075L0 19.176c1.215.56 2.454.818 4.16.818 2.385 0 4.885-1.473 4.885-4.395z"/></svg></span>
+            <span class="sp-name">Scopus</span>
+          </a>
+          <a href="https://orcid.org/0000-0001-7336-8963" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID">
+            <span class="sp-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></span>
+            <span class="sp-name">ORCID</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=as-k-GcAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+            <span class="sp-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></span>
+            <span class="sp-name">Scholar</span>
+          </a>
+        </div>
       </div>
 
       <div class="sidebar-block">
@@ -161,11 +181,6 @@
         <p>School of Economics and Management<br/>China University of Petroleum (Beijing)<br/>Beijing, China</p>
       </div>
 
-      <div class="sidebar-block profile-links">
-        <h2>Profiles</h2>
-        <a href="https://scholar.google.com/citations?user=as-k-GcAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
-        <a href="https://orcid.org/0000-0001-7336-8963" target="_blank" rel="noreferrer">ORCID</a>
-      </div>
     </aside>
 
     <article class="main-column">
